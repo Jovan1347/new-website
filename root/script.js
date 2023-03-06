@@ -55,6 +55,21 @@ const contactBall = document.querySelector(".contact-ball");
 const contactWave = document.querySelector(".contact-wave");
 const contactBackround = document.querySelector(".contact-background");
 
+const menuButton = document.querySelector(".burger-menu");
+const closeButton = document.querySelector(".close-button");
+
+menuButton.addEventListener("click", () => {
+  document.querySelector(".menu").style.left = "0";
+  document.querySelector(".menu").classList.add("show-menu");
+  document.querySelector(".menu").classList.remove("hide-menu");
+});
+
+closeButton.addEventListener("click", () => {
+  document.querySelector(".menu").classList.remove("show-menu");
+  document.querySelector(".menu").classList.add("hide-menu");
+  document.querySelector(".menu").style.left = "-350px";
+});
+
 function beTouching(entries) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
