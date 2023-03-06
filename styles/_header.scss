@@ -56,7 +56,7 @@
             rotate: 45deg;
             width: 20px;
             height: 3px;
-            background-color: white;
+            background-color: $menu-exit-button-background;
         }
 
         .close2 {
@@ -64,7 +64,7 @@
             rotate: -45deg;
             width: 20px;
             height: 3px;
-            background-color: white;
+            background-color: $menu-exit-button-background;
         }
     }
 
@@ -75,6 +75,10 @@
             cursor: pointer;
             font-size: 1.25em;
             margin-bottom: 10px;
+        }
+
+        p:hover {
+            color: $menu-hover-text-color;
         }
     }
 

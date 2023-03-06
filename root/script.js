@@ -62,12 +62,14 @@ menuButton.addEventListener("click", () => {
   document.querySelector(".menu").style.left = "0";
   document.querySelector(".menu").classList.add("show-menu");
   document.querySelector(".menu").classList.remove("hide-menu");
+  document.querySelector("html").style.overflow = "hidden";
 });
 
 closeButton.addEventListener("click", () => {
   document.querySelector(".menu").classList.remove("show-menu");
   document.querySelector(".menu").classList.add("hide-menu");
   document.querySelector(".menu").style.left = "-350px";
+  document.querySelector("html").style.overflow = "auto";
 });
 
 function beTouching(entries) {
