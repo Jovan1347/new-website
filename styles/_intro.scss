@@ -1,0 +1,191 @@
+@import "./colors";
+
+.intro {
+    padding: 50px 10%;
+    width: 100%;
+    height: 90vh;
+    background-image: $intro-background;
+    background-position: center;
+}
+
+.intro-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    .intro-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        .intro-text {
+            text-align: center;
+            margin-bottom: 20px;
+            width: 100%;
+            font-size: 1.5em;
+            color: $intro-info-text-color;
+            text-shadow: 5px 5px 10px $intro-info-text-shadow;
+            animation: show-text 0.5s ease-out;
+        }
+
+        .intro-about {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 60px;
+            width: 100%;
+            height: 80px;
+            background-image: $intro-about-background-color;
+            border-radius: 40px;
+            color: $intro-about-text-color;
+            font-size: 1em;
+            box-shadow: $intro-about-box-shadow;
+            animation: show-text 0.5s ease-out;
+
+            a {
+                text-decoration: none;
+                padding: 0px 5px;
+                border-right: $intro-about-text-border;
+                color: $intro-info-text-color;
+                cursor: pointer;
+            }
+
+            p:hover {
+                color: $intro-info-text-hover-color;
+            }
+
+            .last {
+                border: none;
+            }
+        }
+    }
+
+    img {
+        position: absolute;
+        width: 200px;
+    }
+
+    .waves {
+        width: 300px;
+        rotate: -90deg;
+        top: 10%;
+        left: -30%;
+        animation: waves-move 0.5s ease-out;
+    }
+
+    .ball1 {
+        width: 150px;
+        top: 10%;
+        right: 0;
+        animation: ball-move 0.5s ease-out;
+    }
+
+    .half-donut {
+        bottom: 5%;
+        left: -15%;
+        animation: half-donut-move 0.5s ease-out;
+    }
+
+    .donut2 {
+        width: 150px;
+        bottom: 5%;
+        right: -10%;
+        animation: donut2-move 0.5s ease-out;
+    }
+}
+
+@keyframes ball-move {
+    0% {
+        opacity: 0;
+        rotate: 180deg;
+        right: -2%;
+        width: 50px;
+    }
+
+}
+
+@keyframes waves-move {
+    0% {
+        opacity: 0;
+        left: -25%;
+        width: 100px;
+    }
+}
+
+@keyframes half-donut-move {
+    0% {
+        opacity: 0;
+        left: -20%;
+    }
+}
+
+@keyframes donut2-move {
+    0% {
+        opacity: 0;
+        width: 100px;
+        rotate: 180deg;
+        right: -10%;
+    }
+}
+
+@keyframes show-text {
+    0% {
+        scale: 0.2;
+        opacity: 0;
+    }
+}
+
+@media all and (min-width:1280px) {
+    .intro {
+        height: 80vh;
+        padding: 50px 20%;
+    }
+
+
+    .intro-container {
+        align-items: unset;
+
+        .intro-info {
+            margin-top: 150px;
+
+            .intro-text {
+                width: 65%;
+                font-size: 3.75em;
+            }
+
+            .intro-about {
+                width: 55%;
+                font-size: 1.25em;
+
+                p {
+                    padding: 0px 10px;
+                }
+            }
+        }
+
+        .waves {
+            top: 10%;
+            left: -10%;
+        }
+
+        .ball1 {
+            top: 0%;
+        }
+
+        .half-donut {
+            left: 0%;
+        }
+
+        .donut2 {
+            right: 0;
+        }
+
+    }
+
+
+}

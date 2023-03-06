@@ -1,0 +1,247 @@
+@import "./colors";
+
+@mixin product-containers {
+    margin-top: 50px;
+
+    img {
+        position: relative;
+        width: 125px;
+        margin-bottom: 15px;
+    }
+
+    h3 {
+        position: relative;
+        margin-bottom: 20px;
+        color: $info-heading-color;
+        letter-spacing: 3px;
+    }
+
+    p {
+        position: relative;
+        line-height: 30px;
+        font-weight: 400;
+    }
+
+    .info-text {
+        position: relative;
+    }
+
+    .show-info-text {
+        animation: show-info-text 1s ease-out;
+    }
+
+    .hide-info-text {
+        animation: hide-info-text 1s ease-out;
+    }
+
+    .show-info-image {
+        animation: show-image 1s ease-out;
+        display: block;
+    }
+
+    .hide-info-image {
+        animation: hide-image 1s ease-out;
+    }
+}
+
+@mixin product-containers-pc {
+    @include product-containers();
+    display: flex;
+    width: 70%;
+
+    img {
+        margin-right: 30px;
+    }
+}
+
+.info {
+    padding: 50px 10%;
+    width: 100%;
+    height: auto;
+    background-color: $info-background;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+
+    .info-heading {
+        text-align: center;
+        font-size: 1.5em;
+        color: $info-heading-color;
+    }
+
+    .show-heading {
+        animation: show-heading 1.5s ease-out;
+    }
+
+    .hide-heading {
+        animation: hide-heading 1.5s ease-out;
+    }
+
+    .strategy-container {
+        @include product-containers();
+    }
+
+    .branding-container {
+        @include product-containers();
+    }
+
+    .design-container {
+        @include product-containers();
+
+        img {
+            height: 70%
+        }
+    }
+
+    .marketing-container {
+        @include product-containers();
+    }
+}
+
+
+
+@keyframes show-heading {
+    0% {
+        scale: 2;
+        opacity: 0;
+    }
+
+    20% {
+        scale: 2;
+        opacity: 0;
+    }
+
+    40% {
+        scale: 2;
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hide-heading {
+    0% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    100% {
+        scale: 2;
+        opacity: 0;
+    }
+}
+
+@keyframes show-image {
+    0% {
+        left: -200px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes hide-image {
+    0% {
+        left: 0;
+        opacity: 1;
+    }
+
+    100% {
+        left: -200px;
+        opacity: 0;
+
+    }
+}
+
+@keyframes show-info-text {
+    0% {
+        right: -200px;
+        opacity: 0;
+    }
+
+    20% {
+        right: -200px;
+        opacity: 0;
+    }
+
+    40% {
+        right: -200px;
+        opacity: 0;
+    }
+
+    100% {
+        right: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes hide-info-text {
+    0% {
+        right: 0;
+        opacity: 1;
+    }
+
+    20% {
+        right: 0;
+        opacity: 1;
+    }
+
+    40% {
+        right: 0;
+        opacity: 1;
+    }
+
+    100% {
+        right: -200px;
+        opacity: 0;
+    }
+}
+
+@media all and (min-width: 1280px) {
+    .info-container {
+        display: flex;
+        align-items: center;
+
+        .info-heading {
+            width: 45%;
+            font-size: 2.5em;
+        }
+
+        .products-container {
+            display: grid;
+            justify-items: center;
+            grid-template-columns: repeat(2, 1fr);
+            width: 100%;
+        }
+
+        .strategy-container {
+            @include product-containers-pc();
+        }
+
+        .branding-container {
+            @include product-containers-pc();
+        }
+
+        .design-container {
+            @include product-containers-pc();
+        }
+
+        .marketing-container {
+            @include product-containers-pc();
+        }
+    }
+}

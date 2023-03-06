@@ -1,0 +1,303 @@
+@import "./colors";
+
+.about {
+    position: relative;
+    padding: 50px 10%;
+    width: 100%;
+    height: 80vh;
+    background-color: $about-background;
+}
+
+.about-container {
+    position: relative;
+    height: 100%;
+
+    .about-card {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 100px 20px;
+        padding-top: 150px;
+        top: -200px;
+        background-color: $about-card-background;
+        border-radius: 25px;
+        text-align: start;
+
+        h3 {
+            font-size: 1.75em;
+            color: $about-heading-color;
+            margin-bottom: 25px;
+        }
+
+        p {
+            line-height: 30px;
+            margin-bottom: 25px;
+        }
+
+        .about-button {
+            width: 70%;
+            padding: 20px;
+            background-color: $about-button-background;
+            font-size: 1em;
+            font-weight: bold;
+            color: $about-button-text-color;
+            border-radius: 20px;
+            border: none;
+        }
+    }
+
+    .show-about-card {
+        animation: show-about-card 1s ease-out;
+    }
+
+    .hide-about-card {
+        animation: hide-about-card 1s ease-out;
+    }
+
+    .about-ball {
+        position: absolute;
+        width: 150px;
+        top: -450px;
+        right: 0;
+    }
+
+    .show-about-ball {
+        animation: show-about-ball 1s ease-out;
+    }
+
+    .hide-about-ball {
+        animation: hide-about-ball 1s ease-out;
+    }
+
+    .about-donut {
+        z-index: 1;
+        position: absolute;
+        width: 175px;
+        top: -280px;
+        left: 30px;
+    }
+
+    .show-about-donut {
+        animation: show-about-donut 1s ease-out;
+    }
+
+    .hide-about-donut {
+        animation: hide-about-donut 1s ease-out;
+    }
+
+    .about-cubic {
+        position: absolute;
+        width: 150px;
+        bottom: 80px;
+        left: -30px;
+    }
+
+    .show-about-cubic {
+        animation: show-about-cubic 1s ease-out;
+    }
+
+    .hide-about-cubic {
+        animation: hide-about-cubic 1s ease-out;
+    }
+
+    .about-waves {
+        position: absolute;
+        width: 200px;
+        bottom: -20px;
+        right: 0;
+    }
+
+    .show-about-waves {
+        animation: show-about-waves 1s ease-out;
+    }
+
+    .hide-about-waves {
+        animation: hide-about-waves 1s ease-out;
+    }
+
+}
+
+.background-part {
+    height: 450px;
+    background-image: $about-part-background;
+}
+
+@keyframes show-about-donut {
+    0% {
+        opacity: 0;
+        top: -500px;
+        right: -50px;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hide-about-donut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        top: -500px;
+        right: -50px;
+    }
+}
+
+@keyframes show-about-ball {
+    0% {
+        opacity: 0;
+        scale: 1.5;
+        left: -300px;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hide-about-ball {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        scale: 1.5;
+        left: -300px;
+    }
+}
+
+@keyframes show-about-cubic {
+    0% {
+        opacity: 0;
+        rotate: 180deg;
+        left: -300px;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hide-about-cubic {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        rotate: 180deg;
+        left: -300px;
+    }
+}
+
+@keyframes show-about-waves {
+    0% {
+        opacity: 0;
+        bottom: -300px;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hide-about-waves {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        bottom: -300px;
+    }
+}
+
+@keyframes show-about-card {
+    0% {
+        opacity: 0;
+        right: -300px;
+    }
+
+    100% {
+        opacity: 1;
+        right: 0;
+    }
+
+}
+
+@keyframes hide-about-card {
+    0% {
+        opacity: 1;
+        right: 0;
+    }
+
+    100% {
+        opacity: 0;
+        right: -300px;
+    }
+
+}
+
+@media all and (min-width:1280px) {
+    .about {
+        padding: 50px 20%;
+        height: 65vh;
+    }
+
+    .about-container {
+        .about-card {
+            width: 50%;
+            padding: 100px 50px;
+            padding-top: 200px;
+            top: -250px;
+            right: 0;
+
+            h3 {
+                font-size: 3em;
+            }
+
+            p {
+                font-size: 1.25em;
+            }
+
+            .about-button {
+                width: 45%;
+            }
+        }
+
+        .about-ball {
+            width: 280px;
+            top: -190px;
+            right: unset;
+            left: 100px;
+        }
+
+        .about-donut {
+            width: 230px;
+            top: -320px;
+            left: unset;
+            right: 310px;
+        }
+
+        .about-cubic {
+            width: 200px;
+            bottom: 120px;
+        }
+
+        .about-waves {
+            width: 320px;
+            right: 250px;
+            bottom: 40px;
+        }
+    }
+
+
+    .background-part {
+        height: 400px;
+    }
+}

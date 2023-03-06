@@ -1,0 +1,347 @@
+@import "./colors";
+
+.contact {
+    display: flex;
+    padding: 50px 10%;
+    width: 100%;
+    height: 130vh;
+    background-color: $contact-background;
+    overflow-x: hidden;
+}
+
+.contact-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    .contact-card {
+        display: flex;
+        flex-direction: column;
+        background-color: $contact-card-background;
+        padding: 30px 30px;
+        z-index: 1;
+
+        p {
+            margin-bottom: 5px;
+        }
+
+        input {
+            padding: 0 10px;
+            margin-bottom: 25px;
+            border-radius: 20px;
+            border: 2px solid $contact-input-border-color;
+            background-color: $contact-input-background;
+            height: 50px;
+        }
+
+        .input-message {
+            height: 100px;
+        }
+
+
+        .terms {
+            margin-bottom: 25px;
+
+            input {
+                height: unset;
+                padding: 0;
+                margin: 0;
+            }
+
+        }
+
+        button {
+            width: 100%;
+            padding: 15px 0;
+            border-radius: 15px;
+            background-color: $contact-button-background;
+            color: $contact-button-text-color;
+            font-weight: bold;
+            font-size: 1em;
+            border: none;
+        }
+    }
+
+    .contact-circle {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 170px;
+    }
+
+    .show-contact-circle {
+        animation: show-contact-circle 1s ease-out;
+    }
+
+    .hide-contact-circle {
+        animation: hide-contact-circle 1s ease-out;
+    }
+
+    .contact-donut1 {
+        position: absolute;
+        bottom: 0;
+        left: 0px;
+        width: 150px;
+        rotate: 180deg;
+    }
+
+    .show-contact-donut1 {
+        animation: show-contact-donut1 1s ease-out;
+    }
+
+    .hide-contact-donut1 {
+        animation: hide-contact-donut1 1s ease-out;
+    }
+
+    .contact-donut2 {
+        position: absolute;
+        top: 130px;
+        left: 0;
+        width: 170px;
+    }
+
+    .show-contact-donut2 {
+        animation: show-contact-donut2 1s ease-out;
+    }
+
+    .hide-contact-donut2 {
+        animation: hide-contact-donut2 1s ease-out;
+    }
+
+    .contact-ball {
+        position: absolute;
+        bottom: 120px;
+        right: 0;
+        width: 160px;
+    }
+
+    .show-contact-ball {
+        animation: show-contact-ball 1s ease-out;
+    }
+
+    .hide-contact-ball {
+        animation: hide-contact-ball 1s ease-out;
+    }
+
+    .contact-wave {
+        display: none;
+    }
+
+    .show-contact-wave {
+        animation: show-contact-wave 1s ease-out;
+    }
+
+    .hide-contact-wave {
+        animation: hide-contact-wave 1s ease-out;
+    }
+
+    .contact-background {
+        z-index: 0;
+        position: absolute;
+        width: 600px;
+    }
+
+    .show-contact-background {
+        animation: show-contact-background 1s ease-out;
+    }
+
+    .hide-contact-background {
+        animation: hide-contact-background 1s ease-out;
+    }
+
+}
+
+@keyframes show-contact-circle {
+    0% {
+        opacity: 0;
+        top: 400px;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hide-contact-circle {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        top: 400px;
+    }
+}
+
+@keyframes show-contact-donut1 {
+    0% {
+        opacity: 0;
+        rotate: 720deg;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hide-contact-donut1 {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        rotate: -720deg;
+    }
+}
+
+@keyframes show-contact-donut2 {
+    0% {
+        opacity: 0;
+        left: -300px;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hide-contact-donut2 {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        left: -300px;
+    }
+}
+
+@keyframes show-contact-ball {
+    0% {
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes hide-contact-ball {
+    0% {
+        opacity: 1;
+        scale: 1;
+    }
+
+    100% {
+        opacity: 0;
+        scale: 0.5;
+    }
+}
+
+@keyframes show-contact-wave {
+    0% {
+        opacity: 0;
+        scale: 0.5;
+        left: -300px;
+    }
+
+    100% {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes hide-contact-wave {
+    0% {
+        opacity: 1;
+        scale: 1;
+    }
+
+    100% {
+        opacity: 0;
+        scale: 0.5;
+        left: -300px;
+    }
+}
+
+@keyframes show-contact-background {
+    0% {
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes hide-contact-background {
+    0% {
+        opacity: 1;
+        scale: 1;
+    }
+
+    100% {
+        opacity: 0;
+        scale: 0.5;
+    }
+}
+
+@media all and (min-width:1280px) {
+    .contact {
+        padding: 50px 20%;
+    }
+
+    .contact-container {
+        .contact-card {
+            position: absolute;
+            left: 0;
+            width: 55%;
+        }
+
+        .contact-circle {
+            width: 250px;
+            right: 100px;
+            top: 150px;
+        }
+
+        .contact-donut1 {
+            z-index: 1;
+            width: 200px;
+            left: unset;
+            bottom: unset;
+            right: 200px;
+        }
+
+        .contact-donut2 {
+            width: 300px;
+            top: 100px;
+        }
+
+        .contact-ball {
+            z-index: 1;
+            width: 350px;
+            bottom: 200px;
+            right: 450px;
+        }
+
+        .contact-wave {
+            display: block;
+            position: absolute;
+            width: 300px;
+            bottom: 0;
+            left: 0;
+        }
+
+        .contact-background {
+            width: 90%;
+        }
+
+    }
+}

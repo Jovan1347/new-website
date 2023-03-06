@@ -1,0 +1,399 @@
+@import "./colors";
+
+@mixin card-style {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 35px 15px;
+    margin-bottom: 20px;
+    line-height: 30px;
+    border-radius: 20px;
+    background-color: $designer-card-background;
+
+    h3 {
+        color: $designer-heading-color;
+        font-size: 3em;
+        margin-bottom: 30px;
+    }
+}
+
+@mixin card-style-pc {
+    @include card-style();
+    margin-top: -100px;
+    margin-right: 20px;
+    z-index: 2;
+
+    p {
+        font-size: 1.15em;
+    }
+}
+
+.designers {
+    width: 100%;
+    padding: 50px 10%;
+}
+
+.designers-container {
+    position: relative;
+    padding-top: 150px;
+
+    .designer-images {
+        position: relative;
+        width: 100%;
+
+        .girl-background {
+            position: relative;
+            width: 100%;
+        }
+
+        .show-designer-background {
+            animation: show-designer-background 1s ease-out;
+        }
+
+        .hide-designer-background {
+            animation: hide-designer-background 1s ease-out;
+        }
+
+        .girl {
+            position: absolute;
+            left: 0;
+            top: -20px;
+            width: 90%;
+        }
+
+        .show-designer-girl {
+            animation: show-designer-girl 1s ease-out;
+        }
+
+        .hide-designer-girl {
+            animation: hide-designer-girl 1s ease-out;
+        }
+    }
+
+    .small-circle {
+        position: absolute;
+        top: -50px;
+        left: 0;
+
+        width: 72px;
+        height: 72px;
+        background: $designer-circles-background-color;
+        border-radius: 100%;
+    }
+
+    .show-small-circle {
+        animation: show-small-circle 1s ease-out;
+    }
+
+    .hide-small-circle {
+        animation: hide-small-circle 1s ease-out;
+    }
+
+    .big-circle {
+        position: absolute;
+        top: -150px;
+        right: 0;
+
+        width: 103px;
+        height: 103px;
+        background: $designer-circles-background-color;
+        border-radius: 100%;
+    }
+
+    .show-big-circle {
+        animation: show-big-circle 1s ease-out;
+    }
+
+    .hide-big-circle {
+        animation: hide-big-circle 1s ease-out;
+    }
+
+    .designer-cards {
+        display: flex;
+        flex-direction: column;
+
+        .card-1 {
+            @include card-style();
+        }
+
+        .card-2 {
+            @include card-style();
+            background-image: $designer-card-second-background;
+            color: $designer-card-text-color;
+        }
+
+        .card-3 {
+            @include card-style();
+        }
+
+        .card-4 {
+            @include card-style();
+            background-image: $designer-card-second-background;
+            color: $designer-card-text-color;
+            margin-right: 0px;
+        }
+
+        .move-card-down {
+            animation: move-card-down 1.5s ease-out;
+        }
+
+        .hide-card-down {
+            animation: hide-card-down 1.5s ease-out;
+        }
+
+        .move-card-up {
+            animation: move-card-up 1.5s ease-out;
+        }
+
+        .hide-card-up {
+            animation: hide-card-up 1.5s ease-out;
+        }
+    }
+}
+
+@keyframes show-designer-background {
+    0% {
+        scale: 0.2;
+        opacity: 0;
+    }
+
+    100% {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+@keyframes hide-designer-background {
+    0% {
+        scale: 1;
+        opacity: 1;
+    }
+
+    100% {
+
+        scale: 0.2;
+        opacity: 0;
+    }
+}
+
+@keyframes show-designer-girl {
+    0% {
+        opacity: 0;
+        left: -200px;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hide-designer-girl {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        left: -200px;
+    }
+}
+
+@keyframes show-small-circle {
+    0% {
+        opacity: 0;
+        right: -100px;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hide-small-circle {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        right: -100px;
+    }
+}
+
+@keyframes show-big-circle {
+    0% {
+        opacity: 0;
+        right: -100px;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hide-big-circle {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        right: -100px;
+    }
+}
+
+@keyframes move-card-up {
+    0% {
+        opacity: 0;
+        bottom: -300px;
+    }
+
+    20% {
+        opacity: 0;
+        bottom: -300px;
+    }
+
+    40% {
+        opacity: 0;
+        bottom: -300px;
+    }
+
+    100% {
+        opacity: 1;
+        bottom: 0;
+    }
+}
+
+
+@keyframes hide-card-up {
+    0% {
+        opacity: 1;
+        top: 0;
+    }
+
+    20% {
+        opacity: 1;
+        top: 0;
+    }
+
+    40% {
+        opacity: 1;
+        top: 0;
+    }
+
+    100% {
+        opacity: 0;
+        top: -300px;
+    }
+}
+
+
+@keyframes move-card-down {
+    0% {
+        opacity: 0;
+        top: -300px;
+    }
+
+    20% {
+        opacity: 0;
+        top: -300px;
+    }
+
+    40% {
+        opacity: 0;
+        top: -300px;
+    }
+
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+@keyframes hide-card-down {
+    0% {
+        opacity: 1;
+        bottom: 0;
+    }
+
+    20% {
+        opacity: 1;
+        bottom: 0;
+    }
+
+    40% {
+        opacity: 1;
+        bottom: 0;
+    }
+
+    100% {
+        opacity: 0;
+        bottom: -300px;
+    }
+}
+
+@media all and (min-width:1280px) {
+    .designers {
+        padding: 50px 20%;
+    }
+
+    .designers-container {
+
+        .designer-images {
+
+            .girl-background {
+                left: 65px;
+                width: 70%;
+            }
+
+            .girl {
+                top: unset;
+                left: 115px;
+                bottom: -20px;
+                width: 60%;
+                z-index: 0;
+            }
+        }
+
+        .small-circle {
+            top: unset;
+            left: unset;
+            bottom: 150px;
+            right: 150px;
+
+            width: 125px;
+            height: 125px;
+        }
+
+        .big-circle {
+            top: 20px;
+            right: 50px;
+
+            width: 200px;
+            height: 200px;
+        }
+
+        .designer-cards {
+            flex-direction: row;
+
+            .card-1 {
+                @include card-style-pc();
+            }
+
+            .card-2 {
+
+                @include card-style-pc();
+            }
+
+            .card-3 {
+                @include card-style-pc();
+            }
+
+            .card-4 {
+                @include card-style-pc();
+                margin-right: 0px;
+            }
+        }
+    }
+}
